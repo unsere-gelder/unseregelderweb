@@ -6,10 +6,27 @@
     <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen,projection" href="{{ "{{site.url}}//assets/main.css" | relative_url }}">
     <link rel="stylesheet" type="text/css" media="screen,projection" href="{{ "{{site.url}}//assets/bootstrap.css" | relative_url }}">
     <link href="https://unpkg.com/bootstrap-table@1.15.4/dist/bootstrap-table.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.5.0/css/bootstrap4-toggle.min.css" rel="stylesheet">
 
     <link rel="shortcut icon" type="image/png" href="{{site.url}}/assets/favicon.ico">
+    <style>
+        .carousel-item {
+            height: 50vh;
+            min-height: 350px;
+            background: no-repeat center center scroll;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        .blogposts {}
+        .wappen {
+            transform: rotate(-10deg);
+        }
+        h1 {
+            color: black;
+        }
+    </style>
 </head>
