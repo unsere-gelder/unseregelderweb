@@ -1,0 +1,90 @@
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/tableexport.jquery.plugin/tableExport.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.15.4/dist/bootstrap-table.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.15.4/dist/bootstrap-table-locale-all.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.15.4/dist/extensions/export/bootstrap-table-export.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.5.0/js/bootstrap4-toggle.min.js"></script>
+
+<script>
+  var $toggle = $('#statetoggle')
+  var $table = $('#haushaltstabelle')
+
+  let translate = {
+    "cityName": "Körperschaft",
+    "year": "Jahr",
+    "population": "Bevölkerung",
+    "type": "Typ",
+    "bundesland": "Bundesland",
+    "gemeindeschlüssel": "Gemeindeschlüssel",
+    "status": "Status"
+  }
+
+  function detailFormatter(index, row) {
+    var html = []
+    $.each(row, function (key, value) {
+      if(key != "state" && key != "city" && key != "available" && key != "haushalt") {
+        if(key != "image") {
+          if(key == "cityName") {
+            html.push('<p><b>' + value+ ':</b></p>')
+          }  else {
+            html.push('<p><b>' + translate[key] + ':</b> ' + value + '</p>')
+          }
+        } else {
+          html.push('<img src='+value+'  height="40">')
+        }
+      }
+    })
+    return html.join('')
+  }
+
+  function imageFormatter(row) {
+    return '<img src='+row+' height="40" class="wappen">';
+  }
+
+  function cityNameFormatter(row) {
+    return '<a href="https://unsere-gelder.de/'+row+'">'+row+'</a>';
+  }
+
+  function yearFooter() {
+    return '';
+  }
+
+  function imageFooter() {
+    return '';
+  }
+
+  function cityFooter() {
+    return 'Summe';
+  }
+
+  function populationFooter(data) {
+    let sum = 0;
+    for(i in data) {
+      let row = data[i];
+      sum = sum + row.population;
+    }
+    return sum;
+  }
+
+  function setToToggle(togglebutton) {
+    if(togglebutton.is(':checked')) {
+      $table.bootstrapTable('filterBy', {city: [true]})
+    } else {
+      $table.bootstrapTable('filterBy', {state: [true]})
+    }
+  }
+
+  $toggle.change(function(){
+    setToToggle($(this))
+  });
+
+  $table.bootstrapTable({
+      method: 'get',
+      onLoadSuccess: function() {
+          setToToggle($toggle)
+      },
+   });
+
+</script>

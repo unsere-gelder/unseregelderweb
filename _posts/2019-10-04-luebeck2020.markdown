@@ -1,0 +1,14 @@
+---
+layout: post
+title: "Lübecks Haushalt 2020"
+short: "Neuer Haushalt für die Königin der Hanse"
+image: "01003000/header.jpg"
+date:   2019-10-04 12:22:57 +0200
+categories: "01003000"
+tags:
+ - Lübeck
+ - Haushalt
+ - 2020
+---
+
+Lübeck hat, wie [in der Presse zu lesen](https://www.ln-online.de/Lokales/Luebeck/Haushalt-2020-Was-sie-ueber-Luebecks-Finanzen-wissen-sollten), einen neuen Haushalt abgestimmt

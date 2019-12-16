@@ -1,0 +1,51 @@
+---
+layout: default
+---
+<div class="row d-flex justify-content-center mt-4">
+  <div class="alert alert-danger alert-dismissible fade show w-75  m-5" role="alert">
+    ACHTUNG Alpha! Diese Webseite ist nicht fertig. Es gibt Fehler und Ungereimtheiten. Aber trotzdem nützlich, da vieles funktioniert. Viel Spaß beim Stöbern.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+
+<section class="py-5 m-3">
+  <div class="container">
+
+    <div id="toolbar">
+      <input type="checkbox" id="statetoggle" checked data-toggle="toggle" data-height="1em" data-width="13em" data-on="Städte & Gemeinden" width="20px" data-off="Länder" data-onstyle="info" data-offstyle="info">
+    </div>
+      <table
+        id="haushaltstabelle"
+        data-locale="de-DE"
+        data-toggle="table"
+        data-search="true"
+        data-sort-class="table-active"
+        data-sortable="true"
+        data-detail-view="true"
+        data-detail-view-icon="false"
+        data-toolbar="#toolbar"
+        data-visible-search="false"
+        data-detail-view-by-click="true"
+        data-pagination="true"
+        data-sort-name="population"
+        data-sort-order="desc"
+        data-detail-formatter="detailFormatter"
+        data-show-fullscreen="true"
+        data-show-footer="true"
+        data-url="assets/citydata.json">
+        <thead>
+          <tr>
+            <th data-sortable="false" data-field="image" data-formatter="imageFormatter" data-footer-formatter="imageFooter"></th>
+            <th data-sortable="true" data-field="cityName" data-formatter="cityNameFormatter" data-footer-formatter="cityFooter">Stadt/Land</th>
+            <th data-sortable="true" data-field="year" data-footer-formatter="yearFooter">Jahr</th>
+            <th data-sortable="true" data-field="population" data-footer-formatter="populationFooter">Einwohner</th>
+            <th data-visible="false" data-field="type">Typ</th>
+            <th data-visible="false" data-field="bundesland">Bundesland</th>
+            <th data-visible="false" data-field="gemeindeschlüssel">Gemeindeschlüssel</th>
+          </tr>
+        </thead>
+      </table>
+  </div>
+</section>

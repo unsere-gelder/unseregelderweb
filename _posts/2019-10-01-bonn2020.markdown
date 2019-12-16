@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Offener Haushalt in Bonn"
+short: "Doppelhaushalt 2019/2020 verfügbar."
+image: "05314000/header.jpg"
+date:   2019-10-01 12:22:57 +0200
+categories: "05314000"
+tags:
+ - Bonn
+ - Haushalt
+---
+
+Hier ist ein Text zu Bonn.

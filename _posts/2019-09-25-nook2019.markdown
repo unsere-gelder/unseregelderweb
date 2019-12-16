@@ -1,0 +1,13 @@
+---
+layout: post
+title: "unsere-gelder.de auf der NooK"
+short: "Vortrag über Haushaltsdaten auf der Nacht des offenen Wissens"
+image: "header/nook.jpg"
+date:   2019-09-25 12:22:57 +0200
+categories: "events"
+tags:
+ - Events
+ - Vortrag
+---
+
+Talk auf der NooK
